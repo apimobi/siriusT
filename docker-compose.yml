@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  sirius-b:
+    container_name: sirius-b
+    hostname: sirius-b
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    volumes:
+      - .:/app
+    ports:
+      - "9090:9090"
